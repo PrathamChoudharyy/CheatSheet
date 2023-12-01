@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C - Cheat Sheet</title>
+    <link rel="icon" href="./images/CheatSheet.png" type="image/x-icon">
+    <link rel="stylesheet" href="./StyleSheet CSS/stylecs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./StyleSheet CSS/prism.css">
+    <script src="./StyleSheet CSS/prism.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./images/CheatSheet.png" alt="">
+        </div>
+        <div class="text">
+            CHEAT SHEET
+        </div>
+        <a href="/">
+            <button class="btn">Contact us</button>
+        </a>
+    </header>
+
+    <!-- Horizontal Line -->
+    <hr>
+
+    <!-- Nav-bar -->
+    <nav>
+        <ul>
+            <a href="index.html" target="_blank"><i class="fa-solid fa-house fa-xl" style="color: #eacc05;"></i></a>
+            <li><a href="HTML_index.html">HTML</a></li>
+            <li><a href="CSS_index.html">CSS</a></li>
+            <li><a href="JavaScript_index.html">JavaScript</a></li>
+            <li><a href="c_index.html">C</a></li>
+            <li><a href="C++_index.html">C++</a></li>
+            <li><a href="python_index.html">Python</a></li>
+            <a href="/" target="_blank"></a><i class="fa-solid fa-user fa-xl" style="color: #eacd07;"></i></a>
+        </ul>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        <div class="hero-c">
+            <img src="./images/c_logo.png" alt="">
+            <div>C Cheat Sheet : Copy & Learn Now</div>
+        </div>
+
+        <!-- List -->
+        <ol>
+            <li><h1>Boiler plate</h1>
+                <pre class="language-c"><code>#include<stdio.h> //header files
+int main() //main function
+{
+    // Your code here
+    return(0); //returning value to int main()
+}</code></pre>
+            </li>
+
+            <li><h1>Printf</h1>
+                It is used to show output on the screen
+                <pre class="language-c"><code>printf("Hello World!");</code></pre>
+            </li>
+
+            <li><h1>Scanf</h1>
+                It is used to take input from the user
+                <pre class="language-c"><code>scanf("format_specifier", &variables)</code></pre>
+                <h2>Example: -</h2>
+                <pre class="language-c"><code>int a;
+scanf("%d",&a); // Store keyboard input in a variable with address (address of a or &a)
+printf("%d",&a);</code></pre>
+            </li>
+
+            <li>
+                <h1>Comments</h1>
+                A comment is a code that is not executed by the compiler, and the programmer uses it to annotate their code, providing explanations or reminders about the code's functionality, which aids in readability and future maintenance.
+                <h2>Single Line Comment</h2>
+                <pre class="language-c"><code>// This is a single line comment</code></pre>
+                <h2>Single Line Comment</h2>
+                <pre class="language-c"><code>/* This is a 
+multi-line
+comment
+*/</code></pre>
+            </li>
+
+            <li>
+                <h1>Data Types</h1>
+                The data type defines the kind of data that can be stored in a variable, such as integers, floating-point numbers, characters, or more complex structures. It dictates how the data is stored, interpreted, and manipulated within the program.
+                
+                <h2>Character type</h2>
+                The character type, often represented as a single octet (one byte), is used to store individual characters in the C programming language.
+                <pre class="language-c"><code>char variable_name;</code></pre>
+                The format specifier for a character in C is "%c". To print a character, we use this specifier within the printf function, following the syntax like this:
+                <pre class="language-c"><code>char x;
+scanf(" %c",&x);
+printf("character is %c",x)</code></pre>
+                <h2>Integer type</h2>
+                To store non-decimal numeric values, an integer type is used
+                <pre class="language-c"><code>int variable_name;</code></pre>
+                The format specifier of an integer is "%d"
+                <pre class="language-c"><code>int a;
+scanf("%d",&a);
+printf("%d",a);</code></pre>
+                <h2>Float type</h2>
+                To store decimal numeric values, float type is used
+                <pre class="language-c"><code>float variable_name;</code></pre>
+                The format specifier of a float is "%f"
+                <pre class="language-c"><code>float b;
+scanf("%f",&b);
+printf("%f",b);</code></pre>
+                <h2>Double type</h2>
+                To store a double-precision floating-point value we use double.
+                <pre class="language-c"><code>double variable_name;</code></pre>
+                The format specifier of double is "%f"
+                <pre class="language-c"><code>double ch;
+scanf("%lf",&ch);
+printf("%lf",ch);</code></pre>
+                <h2>Void type</h2>
+                The void type in C represents the absence of a type. It's often used in function declarations to specify that the function does not return any value. For example:
+                <pre class="language-c"><code>void myFunction() {
+// Function code here
+}</code></pre>
+                In this context, the void keyword indicates that myFunction does not return a value. It can also be used for function parameters to indicate that a function takes no arguments
+                </li>
+
+                <li>
+                    <h1>Escape Sequences</h1>
+                    Escape sequences in C are combinations of characters that begin with a backslash (\) and are used to represent characters that cannot be typed directly. These sequences are interpreted in a special way when used inside string literals or character constants.<br>
+                    For example, the escape sequence \n represents a newline character, and \t represents a tab character. Here are some escape sequence characters used in C language.
+                
+                    <h2>Alarm or Beep</h2>
+                    \a produces a beep sound
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("\a"); // It produces a beep sound
+    return 0;
+}</code></pre>
+                    <h2>Backspace</h2>
+                    \b adds a backspace
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("Hello\bWorld"); // It prints "HellWorld"
+    return 0;
+}</code></pre>
+                    <h2>Form Feed</h2>
+
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("Page break here\fContinue text"); // It may create a page break, but it's not supported everywhere
+    return 0;
+}</code></pre>
+                    <h2>Newline</h2>
+                    Newline Character
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("Line one\nLine two"); // Prints two lines
+    return 0;
+}</code></pre>
+                    <h2>Carriage return</h2>
+                    The carriage return, represented by the escape sequence \r in the C programming language, is a control character that resets the cursor position to the beginning of the current line. It doesn't erase any characters but simply moves the cursor to the start of the line. The string "Hello" is printed first, then the carriage return moves the cursor back to the beginning of the line, and "World" is printed, overwriting "Hello."
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{ 
+    printf("Hello\rWorld"); // Outputs "World" but behavior might vary depending on the OS
+    return 0;
+}</code></pre>
+                    <h2>Tab</h2>
+                    It gives a tab space
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("Tabbed\ttext"); // Adds a tab space
+    return 0;
+}</code></pre>
+                    <h2>Backslash</h2>
+                    It adds a backslash
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("\\"); // Prints a backslash
+    return 0;
+}</code></pre>
+                    <h2>Single quote</h2>
+                    It adds a single quotation mark
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("\'"); // Prints a single quotation mark
+    return 0;
+}</code></pre>
+                    <h2>Question mark</h2>
+                    It adds a question mark
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("\?"); // Prints a question mark
+    return 0;
+}</code></pre>
+                    <h2>Octal No.</h2>
+                    It represents the value of an octal number
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("\101"); // Prints 'A', which is 101 in octal
+    return 0;
+}</code></pre>
+                    <h2>Hexadecimal No.</h2>
+                    It represents the value of a hexadecimal number
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("\x41"); // Prints 'A', which is 41 in hexadecimal
+    return 0;
+}</code></pre>
+                    <h2>NULL</h2>
+                    The null character is usually used to terminate a string
+                    <pre class="language-c"><code>#include<stdio.h>
+int main()
+{
+    printf("\0");
+    char str[] = "Hello\0World"; // The null character is used to terminate a string
+    return 0;
+}</code></pre>
+            </li>
+
+            <li>
+                <h1>Conditional Instructions</h1>
+                Conditional statements are used to perform operations based on some condition.
+
+                <h2>If Statement</h2>
+                <pre class="language-c"><code>if (/* condition */)
+{
+    /* code */
+}</code></pre>
+                <h2>If-else Statement</h2>
+                <pre class="language-c"><code>if (/* condition */)
+{
+    /* code */
+}
+else{
+    /* Code */
+}
+</code></pre>
+                <h2>If else-If Statement</h2>
+                <pre class="language-c"><code>if (condition) {
+    // Statements;
+}
+else if (condition){
+    // Statements;
+}
+else{
+    // Statements
+}</code></pre>
+                <h2>Nested If-else</h2>
+                <pre class="language-c"><code>if (/* condition */) {
+    if (/* condition */) {
+        /* code */
+    } else {
+        /* Code */
+    }
+} else {
+    /* Code */
+}
+</code></pre>
+                <h2>Switch Case</h2>
+                <pre class="language-c"><code>switch (expression) {
+    case constant-expression:
+        statement1;
+        statement2;
+        break;
+    case constant-expression:
+        statement;
+        break;
+    // ...
+    default:
+        statement;
+}
+</code></pre>
+            </li>
+
+            <li>
+                <h1>Iterative Statements</h1>
+                Iterative statements facilitate programmers to execute any block of code lines repeatedly and can be controlled as per conditions added by the programmer.
+                
+                <h2>while Loop</h2>
+                It allows the execution of statements inside the block of the loop until the condition of the loop succeeds.
+                <pre class="language-c"><code>while (/* condition */)
+{
+    /* code */
+}</code></pre>
+                <h2>do-while loop</h2>
+                It is an exit-controlled loop. It is very similar to the while loop with one difference, i.e., the body of the do-while loop is executed at least once even if the expression is false
+                <pre class="language-c"><code>do
+{
+    /* code */
+} while (/* condition */);</code></pre>
+                <h2>for loop</h2>
+                It is used to iterate the statements or a part of the program several times. It is frequently used to traverse the data structures like the array and linked list.
+                <pre class="language-c"><code>for (int i = 0; i < count; i++)
+{
+    /* code */
+}</code></pre>
+                <h2>Break Statement</h2>
+                break keyword inside the loop is used to terminate the loop
+                <pre class="language-c"><code>#include <stdio.h>
+
+int main() {
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            printf("Loop is breaking at i = 5\n");
+            break; // Exit the loop when i is 5
+        }
+        printf("i = %d\n", i);
+    }
+
+    return 0;
+}
+</code></pre>
+                <h2>Continue Statement</h2>
+                continue keyword skips the rest of the current iteration of the loop and returns to the starting point of the loop
+                <pre class="language-c"><code>#include <stdio.h>
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        if (i % 2 == 0) {
+            continue; // Skip the rest of the loop body if i is even
+        }
+        printf("%d ", i); // Print the odd numbers
+    }
+    return 0;
+}
+
+// Output is 1 3 5 7 9
+</code></pre>
+            </li>
+
+            <li>
+                <h1>Functions & Recursion</h1>
+                Functions are used to divide an extensive program into smaller pieces. It can be called multiple times to provide reusability and modularity to the C program.
+                <h2>Function Definition</h2>
+                <pre class="language-c"><code>return_type function_name(data_type parameter...){ 
+//code to be executed 
+}</code></pre>
+                <h2>Function Call</h2>                
+                <pre class="language-c"><code>function_name(parameters...);</code></pre>
+                <h2>Return_type in Function</h2>
+                The function return statement returns the specified value or data item to the caller. If we do not want to return any value simply place a void before the function name while defining it.
+                <pre class="language-c"><code>return_type function_name()
+{
+    return value;
+}</code></pre>
+                <h2>Recursion</h2>
+                Recursion is when a function calls a copy of itself to work on a minor problem. And the function that calls itself is known as the Recursive function.
+                <pre class="language-c"><code>void recurse()
+{
+    ... .. ...
+    recurse();
+    ... .. ...
+}</code></pre>
+                
+                <h1>Pointers</h1>
+                A pointer is a variable that contains the address of another variable,
+                <h2>Declaration</h2>
+                <pre class="language-c"><code>datatype *var_name;</code></pre>
+                We can allocate the address of the pointing variable to the pointer variable
+                <pre class="language-c"><code>#include <stdio.h>
+
+int main() {
+    int *ptr, x;
+    x = 15;
+    ptr = &x;
+
+    // This will print the address of x, not the value 15
+    printf("%p", ptr);
+
+    return 0;
+}
+ </code></pre>
+                <h2>Dereferencing pointer variable</h2>
+                <pre class="language-c"><code>#include <stdio.h>
+
+int main() {
+    int *ptr, x;
+    x = 12;
+    ptr = &x; // Assign the address of x to ptr
+    printf("%d", *ptr); // Dereference ptr to print the value of x
+
+    return 0;
+}
+</code></pre>
+
+                <h1>Arrays</h1>
+                An array is a collection of data items of the same type.
+                <h2>Declaration</h2>
+                <pre class="language-c"><code>data_type array_name[array_size];</code></pre>
+                <pre class="language-c"><code>#include<stdio.h>                         
+int main()                               
+{
+int arr[10];   
+}</code></pre>
+                <h2>Accessing element</h2>
+                <pre class="language-c"><code>data_type variable_name = array[index];</code></pre>
+
+                <h1>Strings</h1>
+                A string is a 1-D character array terminated by a null character ('\0')
+                <h2>Declaration</h2>
+                <pre class="language-c"><code>char str_name[size];</code></pre>
+                <h2>gets() function</h2>
+                It allows you to enter a multi-word string.
+                <pre class="language-c"><code>gets("string");</code></pre>
+                <h2>puts() function</h2>
+                It is used to show string output
+                <pre class="language-c"><code>puts("string");</code></pre>
+                <h2>fgets() function</h2>
+                The gets() function is considered unsafe, and it is better to use fgets() instead.
+                <pre class="language-c"><code>#include <stdio.h>
+
+int main() {
+    char str[50];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    printf("You entered: %s", str);
+    return 0;
+}
+</code></pre>
+
+                <h1>String Functions</h1>
+
+                <h2>strlen() function</h2>
+                It is used to calculate the length of the string
+                <pre class="language-c"><code>strlen(string_name);</code></pre>
+                <h2>strcpy() function</h2>
+                It is used to copy the content of second-string into the first string passed to it
+                <pre class="language-c"><code>strcpy(destination, source);</code></pre>
+                <h2>strcat() function</h2>
+                It is used to concatenate two strings
+                <pre class="language-c"><code>strcat(first_string, second_string);</code></pre>
+                <h2>strcmp() function</h2>
+                It is used to compare two strings
+                <pre class="language-c"><code>strcmp(first_string, second_string);</code></pre>
+                <h2>strlwr() function</h2>
+                It is used to convert characters of strings into lowercase
+                <pre class="language-c"><code>strlwr(string_name);</code></pre>
+                <h2>strupr() function</h2>
+                It is used to convert characters of strings into uppercase
+                <pre class="language-c"><code>strupr(string_name);</code></pre>
+                <h2>strrev() function</h2>
+                It is used to reverse the string
+                <pre class="language-c"><code>strrev(string_name);</code></pre>
+
+                <h1>Structures</h1>
+                The structure is a collection of variables of different types under a single name. Defining structure means creating a new data type.
+                <h2>Structure syntax</h2>
+                <pre class="language-c"><code>struct structureName 
+{
+    dataType member1;
+    dataType member2;
+    ...
+};</code></pre>
+                <h2>typedef keyword</h2>
+                typedef function allows users to provide alternative names for the primitive and user-defined data types.
+                <pre class="language-c"><code>typedef struct structureName 
+{
+    dataType member1;
+    dataType member2;
+    ...
+} new_name;</code></pre>
+
+                <h1>File Handling</h1>
+
+                <h2>FILE Pointer</h2>
+                <pre class="language-c"><code>FILE *filePointer;</code></pre>
+                <h2>Opening a file</h2>
+                It is used to open a file in C.
+                <pre class="language-c"><code>filePointer = fopen(fileName.txt, w)</code></pre>
+                <h2>fscanf() function</h2>
+                It is used to read the content of a file.
+                <pre class="language-c"><code>fscanf(FILE *stream, const char *format, ...)</code></pre>
+                <h2>fprintf() function</h2>
+                It is used to write content into the file.
+                <pre class="language-c"><code>fprintf(FILE *fptr, const char *str, ...);</code></pre>
+                <h2>fgetc() function</h2>
+                It reads a character from a file opened in read mode. It returns EOF on reaching the end of the file.
+                <pre class="language-c"><code>fgetc(FILE *pointer);</code></pre>
+                <h2>fputc() function</h2>
+                It writes a character to a file opened in write mode
+                <pre class="language-c"><code>fputc(char, FILE *pointer);</code></pre>
+                <h2>Closing a file</h2>
+                It closes the file.
+                <pre class="language-c"><code>fclose(filePointer);</code></pre>
+
+                <h1>Dynamic Memory Allocation</h1>
+                A set of functions for dynamic memory allocation from the heap. These methods are used to use the dynamic memory which makes our C programs more efficient
+                <h2>malloc() function</h2>
+                Stands for 'Memory allocation' and reserves a block of memory with the given amount of bytes.
+                <pre class="language-c"><code>ptr = (castType*) malloc(size);</code></pre>
+                <h2>calloc() function</h2>
+                Stands for 'Contiguous allocation' and reserves n blocks of memory with the given amount of bytes.
+                <pre class="language-c"><code>ptr = (castType*)calloc(n, size);</code></pre>
+                <h2>free function</h2>
+                It is used to free the allocated memory.
+                <pre class="language-c"><code>free(ptr);</code></pre>
+                <h2>realloc() function</h2>
+                If the allocated memory is insufficient, then we can change the size of previously allocated memory using this function for efficiency purposes
+                <pre class="language-c"><code>ptr = realloc(ptr, x);</code></pre>
+            </li>
+
+        </ol>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download">
+        <h3>Download C CheatSheet PDF</h3>
+        <a href="./Documents/C CheatSheet PDF.pdf">
+            <button class="btn-d">PDF Here !!!</button>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer1">
+            <img src="./images/CheatSheet.png" alt="">
+            <h1>CHEAT SHEET</h1>
+            <h4>Developed by Pratham Choudhary</h4>
+        </div>
+
+        <div class="footer2">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML_index.html">HTML</a></li>
+                <li><a href="CSS_index.html">CSS</a></li>
+                <li><a href="JavaScript_index.html">JavaScript</a></li>
+                <li><a href="c_index.html">C</a></li>
+                <li><a href="C++_index.html">C++</a></li>
+                <li><a href="python_index.html">Python</a></li>
+            </ul>
+        </div>
+
+        <div class="footer3">
+            <ul>
+                <li><a href="/">Portfolio</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">Service</a></li>
+            </ul>
+        </div>
+        <div class="vl"></div>
+        <div class="footer4">
+            <h1>Follow Us</h1>
+            <a href="https://github.com/PrathamChoudharyy" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #ebcd07;"></i></a>
+            <a href="https://www.linkedin.com/in/pratham-choudhary-coder/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl" style="color: #eacc05;"></i></a>
+            <a href="https://www.instagram.com/pratham_gurjarr/" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="color: #eacc05;"></i></a>
+            <h1>Mail us</h1>
+            <a href="/" target="_blank"><i class="fa-solid fa-envelope fa-2xl" style="color: #eacc05;"></i>choudharyy.pratham@gmail.com</a>
+        </div>
+
+    </footer>
+    <!-- Copyright -->
+    <div class="copy">
+        <hr>
+        <h5>All rights reserved &copy; 2023 Pratham Choudhary</h5>
+    </div>
+</body>
+
+</html>

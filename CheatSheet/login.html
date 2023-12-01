@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Add Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-fmS/H9Ty53L3j66fy15zVkoFEKS5trUAs9g8kRXLgOy8yJd3FzYNUxXlpe3T5KRg7tqbpq4zNtr1DAK0P6VlQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Style for icon buttons */
+        .icon-btn {
+            padding: 10px;
+            margin-right: 5px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+
+        <div class="link">
+            <a href="#" onclick="showSignUp()">Sign Up</a> |
+            <a href="#" onclick="showForgotPassword()">Forgot Password</a>
+        </div>
+
+        <div>
+            <!-- Add the following login buttons with icons -->
+            <button onclick="loginWithGoogle()" class="icon-btn"><i class="fab fa-google"></i> Login with Google</button>
+            <button onclick="loginWithGitHub()" class="icon-btn"><i class="fab fa-github"></i> Login with GitHub</button>
+            <button onclick="loginWithFacebook()" class="icon-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI/tZ5IoX4yN6U3zZ+UOMlVVeP+RoLY5/o/e2lFI=" crossorigin="anonymous"></script>
+    <!-- Add Font Awesome script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-JuAgwYj3Yap+eR/xNE3f0iApH6zyI5C8hL30BY+RmFwqqNO8tmKSI+2H5m5c4aao+QMIkQ4GfUmYR6Fj3Qzx/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function validateLogin() {
+            // Your existing login validation logic
+        }
+
+        function showSignUp() {
+            // Your existing sign-up logic
+        }
+
+        function showForgotPassword() {
+            // Your existing forgot password logic
+        }
+
+        function loginWithGoogle() {
+            alert('Redirect to Google login page or implement Google OAuth');
+            // You would typically redirect to the Google login page or initiate OAuth here
+        }
+
+        function loginWithGitHub() {
+            alert('Redirect to GitHub login page or implement GitHub OAuth');
+            // You would typically redirect to the GitHub login page or initiate OAuth here
+        }
+
+        function loginWithFacebook() {
+            alert('Redirect to Facebook login page or implement Facebook OAuth');
+            // You would typically redirect to the Facebook login page or initiate OAuth here
+        }
+    </script>
+</body>
+</html>

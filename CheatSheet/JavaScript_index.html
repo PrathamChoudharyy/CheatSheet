@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Cheat Sheet</title>
+    <link rel="icon" href="./images/CheatSheet.png" type="image/x-icon">
+    <link rel="stylesheet" href="./StyleSheet CSS/stylecs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./StyleSheet CSS/prism.css">
+    <script src="./StyleSheet CSS/prism.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./images/CheatSheet.png" alt="">
+        </div>
+        <div class="text">
+            CHEAT SHEET
+        </div>
+        <a href="/">
+            <button class="btn">Contact us</button>
+        </a>
+    </header>
+
+    <!-- Horizontal Line -->
+    <hr>
+
+    <!-- Nav-bar -->
+    <nav>
+        <ul>
+            <a href="index.html" target="_blank"><i class="fa-solid fa-house fa-xl" style="color: #eacc05;"></i></a>
+            <li><a href="HTML_index.html">HTML</a></li>
+            <li><a href="CSS_index.html">CSS</a></li>
+            <li><a href="JavaScript_index.html">JavaScript</a></li>
+            <li><a href="c_index.html">C</a></li>
+            <li><a href="C++_index.html">C++</a></li>
+            <li><a href="python_index.html">Python</a></li>
+            <a href="/" target="_blank"></a><i class="fa-solid fa-user fa-xl" style="color: #eacd07;"></i></a>
+        </ul>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        <div class="hero">
+            <img src="./images/js_logo.png" alt="">
+            <div>JavaScript Cheat Sheet : Copy & Learn Now</div>
+        </div>
+
+        <!-- List -->
+        <ol>
+            <li><h1>JavaScript Basics</h1>
+                Set of JavaScript basic syntax to add, execute and write basic programming paradigms in Javascript 
+                
+                <h2>On Page Script</h2>
+                Adding internal JavaScript to HTML
+                <pre class="language-js"><code>&lt;script type="text/javascript"&gt; //JS code goes here &lt;/script&gt; </code></pre>
+                <h2>External JS File</h2>
+                Adding external JavaScript to HTML
+                <pre class="language-js"><code>&lt;script src="filename.js"&gt;&lt;/script&gt;</code></pre>
+            
+                <h1>Function</h1>
+                JavaScript Function syntax
+                <pre class="language-js"><code>function nameOfFunction() {
+    // function body 
+}</code></pre>
+
+                <h1>DOM Element</h1>
+                Changing content of a DOM Element
+                <pre class="language-js"><code>document.getElementById("elementID").innerHTML = "Hello World!";</code></pre>
+                <h1>Output</h1>
+                This will print the value of a in JavaScript console
+                <pre class="language-js"><code>console.log(a);</code></pre>
+
+                <h1>Conditional Statements</h1>
+
+                <h2>If Statements</h2>
+                The block of code to be executed, when the condition specified is true.
+                <pre class="language-js"><code>if (condition) {
+    // block of code to be executed if the condition is true
+}</code></pre>
+                <h2>If-else Statements</h2>
+                If the condition for the if block is false, then the else block will be executed.
+                <pre class="language-js"><code>if (condition) {
+    // block of code to be executed if the condition is true
+} else {
+    // block of code to be executed if the condition is false
+}</code></pre>
+                <h2>Else-if Statements</h2>
+                A basic if-else ladder
+                <pre class="language-js"><code>if (condition1) {
+    // block of code to be executed if condition1 is true
+} else if (condition2) {
+    // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+    // block of code to be executed if the condition1 is false and condition2 is false
+}</code></pre>
+                <h2>Switch Statements</h2>
+                Switch case statement in JavaScript
+                <pre class="language-js"><code>switch (expression) {
+    case x:
+        // code block
+        break;
+    case y:
+        // code block
+        break;
+    default:
+        // code block
+}</code></pre>
+                <h1>Iterative Statements (Loops)</h1>
+                Iterative statement facilitates programmer to execute any block of code lines repeatedly and can be controlled as per conditions added by the programmer.
+                <h2>For loop</h2>
+                For loop syntax in javascript
+                <pre class="language-js"><code>for (initialization; condition; incrementation;) {
+    // code block to be executed
+}</code></pre>
+                <h2>While loop</h2>
+                Runs the code till the specified condition is true
+                <pre class="language-js"><code>while (condition) {
+    // code block to be executed
+}</code></pre>
+                <h2>Do While loop</h2>
+                A do while loop is executed at least once despite the condition being true or false
+                <pre class="language-js"><code>do {
+    // run this code in block
+    i++;
+} while (condition);</code></pre>
+
+                <h1>Strings</h1>
+                The string is a sequence of characters that is used for storing and managing text data.
+
+                <h2>CharAt method</h2>
+                Returns the character from the specified index.
+                <pre class="language-js"><code>str.charAt(3)</code></pre>
+                <h2>Concat method</h2>
+                Joins two or more strings together.
+                <pre class="language-js"><code>str1.concat(str2)</code></pre>
+                <h2>index of method</h2>
+                Returns the index of the first occurrence of the specified character from the string else -1 if not found.
+                <pre class="language-js"><code>str.indexOf('substr')</code></pre>
+                <h2>match method</h2>
+                Searches a string for a match against a regular expression.
+                <pre class="language-js"><code>str.match(/(chapter \d+(\.\d)*)/i;)</code></pre>
+                <h2>replace method</h2>
+                Searches a string for a match against a specified string or char and returns a new string by replacing the specified values.
+                <pre class="language-js"><code>str1.replace(str2)</code></pre>
+                <h2>search method</h2>
+                Searches a string against a specified value.
+                <pre class="language-js"><code>str.search('term')</code></pre>
+                <h2>split method</h2>
+                Splits a string into an array consisting of substrings.
+                <pre class="language-js"><code>str.split('\n')</code></pre>
+                <h2>substring method</h2>
+                Returns a substring of a string containing characters from the specified indices.
+                <pre class="language-js"><code>str.substring(0,5)</code></pre>
+
+                <h1>Arrays</h1>
+                The array is a collection of data items of the same type. In simple terms, it is a variable that contains multiple values.
+                <h2>variable</h2>
+                Containers for storing data.
+                <pre class="language-js"><code>var fruit = ["element1", "element2", "element3"];</code></pre>
+                <h2>concat method</h2>
+                Joins two or more arrays together.
+                <pre class="language-js"><code>concat()</code></pre>
+                <h2>indexOf method</h2>
+                Returns the index of the specified item from the array.
+                <pre class="language-js"><code>indexOf()</code></pre>
+                <h2>join method</h2>
+                Converts the array elements to a string.
+                <pre class="language-js"><code>join()</code></pre>
+                <h2>pop method</h2>
+                Deletes the last element of the array.
+                <pre class="language-js"><code>pop()</code></pre>
+                <h2>reverse method</h2>
+                This method reverses the order of the array elements.
+                <pre class="language-js"><code>reverse()</code></pre>
+                <h2>sort method</h2>
+                Sorts the array elements in a specified manner.
+                <pre class="language-js"><code>sort()</code></pre>
+                <h2>toString method</h2>
+                Converts the array elements to a string.
+                <pre class="language-js"><code>toString()</code></pre>
+                <h2>valueOf method</h2>
+                returns the relevant Number Object holding the value of the argument passed
+                <pre class="language-js"><code>valueOf()</code></pre>
+
+                <h1>Number Methods</h1>
+                JS math and number objects provide several constant and methods to perform mathematical operations.
+                <h2>toExponential method</h2>
+                Converts a number to its exponential form.
+                <pre class="language-js"><code>toExponential()</code></pre>
+                <h2>toPrecision method</h2>
+                Formats a number into a specified length.
+                <pre class="language-js"><code>toPrecision()</code></pre>
+                <h2>toString method</h2>
+                Converts an object to a string
+                <pre class="language-js"><code>toString()</code></pre>
+                <h2>valueOf method</h2>
+                Returns the primitive value of a number.
+                <pre class="language-js"><code>valueOf()</code></pre>      
+
+                <h1>Maths Methods</h1>
+                <h2>Ceil method</h2>
+                Rounds a number upwards to the nearest integer, and returns the result
+                <pre class="language-js"><code>ceil(x)</code></pre>
+                <h2>exp method</h2>
+                Returns the value of E^x.
+                <pre class="language-js"><code>exp(x)</code></pre>
+                <h2>log method</h2>
+                Returns the logarithmic value of x.
+                <pre class="language-js"><code>log(x)</code></pre>
+                <h2>pow method</h2>
+                Returns the value of x to the power y.
+                <pre class="language-js"><code>pow(x,y)</code></pre>
+                <h2>random method</h2>
+                Returns a random number between 0 and 1.
+                <pre class="language-js"><code>random()</code></pre>
+                <h2>sqrt method</h2>
+                Returns the square root of a number x
+                <pre class="language-js"><code>sqrt(x)</code></pre>
+
+                <h1>Dates</h1>
+                Date object is used to get the year, month and day. It has methods to get and set day, month, year, hour, minute, and seconds.
+                <h2>Pulling Date from the Date object</h2>
+                Returns the date from the date object
+                <pre class="language-js"><code>getDate()</code></pre>
+                <h2>Pulling Day from the Date object</h2>
+                Returns the day from the date object
+                <pre class="language-js"><code>getDay()</code></pre>
+                <h2>Pulling Hours from the Date object</h2>
+                Returns the hours from the date object
+                <pre class="language-js"><code>getHours()</code></pre>
+                <h2>Pulling Minutes from the Date object</h2>
+                Returns the minutes from the date object
+                <pre class="language-js"><code>getMinutes()</code></pre>
+                <h2>Pulling Seconds from the Date object</h2>
+                Returns the seconds from the date object
+                <pre class="language-js"><code>getSeconds()</code></pre>
+                <h2>Pulling Time from the Date object</h2>
+                Returns the time from the date object
+                <pre class="language-js"><code>getTime()</code></pre>
+
+                <h1>Mouse Events</h1>
+                Any change in the state of an object is referred to as an Event. With the help of JS, you can handle events, i.e., how any specific HTML tag will work when the user does something.
+                <h2>click</h2>
+                Fired when an element is clicked
+                <pre class="language-js"><code>element.addEventListener('click', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+                <h2>oncontextmenu</h2>
+                Fired when an element is right-clicked
+                <pre class="language-js"><code>element.addEventListener('contextmenu', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+                <h2>dblclick</h2>
+                Fired when an element is double-clicked
+                <pre class="language-js"><code>element.addEventListener('dblclick', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+                <h2>mouseenter</h2>
+                Fired when an element is entered by the mouse arrow
+                <pre class="language-js"><code>element.addEventListener('mouseenter', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+                <h2>mouseleave</h2>
+                Fired when an element is exited by the mouse arrow
+                <pre class="language-js"><code>element.addEventListener('mouseleave', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+                <h2>mousemove</h2>
+                Fired when the mouse is moved inside the element
+                <pre class="language-js"><code>element.addEventListener('mousemove', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+
+                <h1>Keyboard Events</h1>
+                <h2>keydown</h2>
+                Fired when the user is pressing a key on the keyboard
+                <pre class="language-js"><code>element.addEventListener('keydown', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+                <h2>keypress</h2>
+                Fired when the user presses the key on the keyboard
+                <pre class="language-js"><code>element.addEventListener('keypress', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+                <h2>keyup</h2>
+                Fired when the user releases a key on the keyboard
+                <pre class="language-js"><code>element.addEventListener('keyup', () => {
+    // Code to be executed when the event is fired
+});</code></pre>
+
+                <h1>Errors</h1>
+                Errors are thrown by the compiler or interpreter whenever they find any fault in the code, and it can be of any type like syntax error, run-time error, logical error, etc. JS provides some functions to handle the errors.
+                <h2>try and catch</h2>
+                Try the code block and execute catch when err is thrown
+                <pre class="language-js"><code>try {
+    Block of code to try
+    }
+catch (err) {
+    Block of code to handle errors
+}</code></pre>
+
+                <h1>Window methods</h1>
+                Methods that are available from the window object
+                <h2>alert method</h2>
+                Used to alert something on the screen
+                <pre class="language-js"><code>alert()</code></pre>
+                <h2>blur method</h2>
+                The blur() method removes focus from the current window.
+                <pre class="language-js"><code>blur()</code></pre>
+                <h2>setInterval</h2>
+                Keeps executing code at a certain interval
+                <pre class="language-js"><code>setInterval(() => {
+    // Code to be executed
+}, 1000);</code></pre>
+                <h2>setTimeout</h2>
+                Executes the code after a certain interval of time
+                <pre class="language-js"><code>setTimeout(() => {
+    // Code to be executed
+}, 1000);</code></pre>
+                <h2>close</h2>
+                The Window. close() method closes the current window
+                <pre class="language-js"><code>window.close()</code></pre>
+                <h2>confirm</h2>
+                The window.confirm() instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels
+                <pre class="language-js"><code>window.confirm('Are you sure?')</code></pre>
+                <h2>open</h2>
+                Opens a new window
+                <pre class="language-js"><code>window.open("https://www.google.com");</code></pre>
+                <h2>prompt</h2>
+                Prompts the user with a text and takes a value. Second parameter is the default value
+                <pre class="language-js"><code>var name = prompt("What is your name?", "Pratham Choudhary");</code></pre>
+                <h2>scrollBy</h2>
+                <pre class="language-js"><code>window.scrollBy(100, 0); // Scroll 100px to the right</code></pre>
+                <h2>scrollTo</h2>
+                Scrolls the document to the specified coordinates.
+                <pre class="language-js"><code>window.scrollTo(500, 0); // Scroll to horizontal position 500</code></pre>
+                <h2>clearInterval</h2>
+                Clears the setInterval. var is the value returned by setInterval call
+                <pre class="language-js"><code>clearInterval(var)</code></pre>
+                <h2>stop</h2>
+                Stops the further resource loading
+                <pre class="language-js"><code>stop()</code></pre>
+
+                <h1>Query/Get Elements</h1>
+                The browser creates a DOM (Document Object Model) whenever a web page is loaded, and with the help of HTML DOM, one can access and modify all the elements of the HTML document.
+                <h2>querySelector</h2>
+                Selector to select first matching element
+                <pre class="language-js"><code>document.querySelector('css-selectors')</code></pre>
+                <h2>querySelectorAll</h2>
+                A selector to select all matching elements
+                <pre class="language-js"><code>document.querySelectorAll('css-selectors', ...)</code></pre>
+                <h2>getElementsByTagName</h2>
+                Select elements by tag name
+                <pre class="language-js"><code>document.getElementsByTagName('element-name')</code></pre>
+                <h2>getElementsByClassName</h2>
+                Select elements by class name
+                <pre class="language-js"><code>document.getElementsByClassName('class-name')</code></pre>
+                <h2>Get Element by Id</h2>
+                Select an element by its id
+                <pre class="language-js"><code>document.getElementById('id')</code></pre>
+
+                <h1>Creating Elements</h1>
+                Create new elements in the DOM
+                <h2>createElement</h2>
+                Create a new element
+                <pre class="language-js"><code>document.createElement('div')</code></pre>
+                <h2>createTextNode</h2>
+                Create a new text node
+                <pre class="language-js"><code>document.createTextNode('some text here')</code></pre>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download">
+        <h3>Download JavaScript CheatSheet PDF</h3>
+        <a href="./Documents/JavaScript CheatSheet PDF.pdf">
+            <button class="btn-d">PDF Here !!!</button>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer1">
+            <img src="./images/CheatSheet.png" alt="">
+            <h1>CHEAT SHEET</h1>
+            <h4>Developed by Pratham Choudhary</h4>
+        </div>
+
+        <div class="footer2">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML_index.html">HTML</a></li>
+                <li><a href="CSS_index.html">CSS</a></li>
+                <li><a href="JavaScript_index.html">JavaScript</a></li>
+                <li><a href="c_index.html">C</a></li>
+                <li><a href="C++_index.html">C++</a></li>
+                <li><a href="python_index.html">Python</a></li>
+            </ul>
+        </div>
+
+        <div class="footer3">
+            <ul>
+                <li><a href="/">Portfolio</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">Service</a></li>
+            </ul>
+        </div>
+        <div class="vl"></div>
+        <div class="footer4">
+            <h1>Follow Us</h1>
+            <a href="https://github.com/PrathamChoudharyy" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #ebcd07;"></i></a>
+            <a href="https://www.linkedin.com/in/pratham-choudhary-coder/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl" style="color: #eacc05;"></i></a>
+            <a href="https://www.instagram.com/pratham_gurjarr/" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="color: #eacc05;"></i></a>
+            <h1>Mail us</h1>
+            <a href="/" target="_blank"><i class="fa-solid fa-envelope fa-2xl" style="color: #eacc05;"></i>choudharyy.pratham@gmail.com</a>
+        </div>
+
+    </footer>
+    <!-- Copyright -->
+    <div class="copy">
+        <hr>
+        <h5>All rights reserved &copy; 2023 Pratham Choudhary</h5>
+    </div>
+</body>
+
+</html>

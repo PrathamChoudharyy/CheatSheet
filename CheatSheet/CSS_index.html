@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Cheat Sheet</title>
+    <link rel="icon" href="./images/CheatSheet.png" type="image/x-icon">
+    <link rel="stylesheet" href="./StyleSheet CSS/stylecs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./StyleSheet CSS/prism.css">
+    <script src="./StyleSheet CSS/prism.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./images/CheatSheet.png" alt="">
+        </div>
+        <div class="text">
+            CHEAT SHEET
+        </div>
+        <a href="/">
+            <button class="btn">Contact us</button>
+        </a>
+    </header>
+
+    <!-- Horizontal Line -->
+    <hr>
+
+    <!-- Nav-bar -->
+    <nav>
+        <ul>
+            <a href="index.html" target="_blank"><i class="fa-solid fa-house fa-xl" style="color: #eacc05;"></i></a>
+            <li><a href="HTML_index.html">HTML</a></li>
+            <li><a href="CSS_index.html">CSS</a></li>
+            <li><a href="JavaScript_index.html">JavaScript</a></li>
+            <li><a href="c_index.html">C</a></li>
+            <li><a href="C++_index.html">C++</a></li>
+            <li><a href="python_index.html">Python</a></li>
+            <a href="/" target="_blank"></a><i class="fa-solid fa-user fa-xl" style="color: #eacd07;"></i></a>
+        </ul>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        <div class="hero">
+            <img src="./images/css_logo.png" alt="">
+            <div>CSS Cheat Sheet : Copy & Learn Now</div>
+        </div>
+
+        <!-- List -->
+        <ol>
+            <li><h1>Boiler plate</h1>
+                <pre class="language-css"><code>*{
+    margin: 0;
+    padding: 0;
+}</code></pre>
+            </li>
+
+            <li><h1>Font</h1>
+                There are many properties related to the font, such as the face, weight, style, etc. These properties allow you to change the style or complete look of your text.
+                
+                <h2>Font-Family</h2><pre class="language-css"><code>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</code></pre>
+                <h2>Font-Style</h2><pre class="language-css"><code>font-style: italic;</code></pre>
+                <h2>Font-Variant</h2><pre class="language-css"><code>font-variant: small-caps;</code></pre>
+                <h2>Font-Wieght</h2><pre class="language-css"><code>font-weight: bold;</code></pre>
+                <h2>Font-Size</h2><pre class="language-css"><code>font-size: larger;</code></pre>
+                <h2>Font</h2><pre class="language-css"><code>font: style variant weight size family;</code></pre>
+            
+                <h1>Text</h1>
+                Text properties allow one to manipulate alignment, spacing, decoration, indentation, etc., in the document.
+
+                <h2>Text-Align</h2><pre class="language-css"><code>text-align: justify;</code></pre>
+                <h2>Letter-Spacing</h2><pre class="language-css"><code>letter-spacing: .15em;</code></pre>
+                <h2>Text-Decoration</h2><pre class="language-css"><code>text-decoration: underline;</code></pre>
+                <h2>Word-Spacing</h2><pre class="language-css"><code>word-spacing: 0.25em;</code></pre>
+                <h2>Text-Transform</h2><pre class="language-css"><code>text-transform: uppercase;</code></pre>
+                <h2>Text-Indent</h2><pre class="language-css"><code>text-indent: 0.5cm;</code></pre>
+                <h2>Line-Height</h2><pre class="language-css"><code>line-height: normal;</code></pre>
+
+                <h1>Background</h1>
+                As the name suggests, these properties are related to background, i.e., you can change the color, image, position, size, etc., of the document.
+
+                <h2>Background-Image</h2><pre class="language-css"><code>background-image: url("Path");</code></pre>
+                <h2>Background-Position</h2><pre class="language-css"><code>background-position: right top;</code></pre>
+                <h2>Background-Size</h2><pre class="language-css"><code>background-size: cover;</code></pre>
+                <h2>Background-Repeat</h2><pre class="language-css"><code>background-repeat: no-repeat;</code></pre>
+                <h2>Background-Attachment</h2><pre class="language-css"><code>background-attachment: scroll;</code></pre>
+                <h2>Background-Color</h2><pre class="language-css"><code>background-color: fuchsia;</code></pre>
+                <h2>Background</h2><pre class="language-css"><code>background: color image repeat attachment position;</code></pre>
+
+                <h1>Border</h1>
+                Border properties are used to change the style, radius, color, etc., of buttons or other items of the document.
+                <h2>Border-Width</h2><pre class="language-css"><code>border-width: 5px;</code></pre>
+                <h2>Border-Style</h2><pre class="language-css"><code>border-style: solid;</code></pre>
+                <h2>Border-Color</h2><pre class="language-css"><code>border-color: aqua;</code></pre>
+                <h2>Border-Radius</h2><pre class="language-css"><code>border-radius: 15px;</code></pre>
+                <h2>Border</h2><pre class="language-css"><code>border: width style color;</code></pre>
+
+                <h1>Box Model</h1>
+                In laymen's terms, the CSS box model is a container that wraps around every HTML element. It consists of margins, borders, padding, and the actual content. It is used to create the design and layout of web pages.
+                <h2>Float</h2><pre class="language-css"><code>float: none;</code></pre>
+                <h2>Clear</h2><pre class="language-css"><code>clear: both;</code></pre>
+                <h2>Display</h2><pre class="language-css"><code>display: block;</code></pre>
+                <h2>Height</h2><pre class="language-css"><code>height: fit-content;</code></pre>
+                <h2>Width</h2><pre class="language-css"><code>width: auto;</code></pre>
+                <h2>Padding</h2><pre class="language-css"><code>padding: top right bottom left;</code></pre>
+                <h2>Overflow</h2><pre class="language-css"><code>overflow: hidden;</code></pre>
+                <h2>Visibility</h2><pre class="language-css"><code>visibility: visible;</code></pre>
+                <h2>Margin</h2><pre class="language-css"><code>margin: top right bottom left;</code></pre>
+
+                <h1>Colors</h1>
+                With the help of the color property, one can give color to text, shape, or any other object.
+                
+                <h2>Color</h2><pre class="language-css"><code>color: cornsilk;</code></pre>
+                <h2>Opacity</h2><pre class="language-css"><code>opacity: 4;</code></pre>
+            
+                <h1>Template Layout</h1>
+                Specifies the visual look of the content inside a template.
+            
+                <h2>Box-Align</h2><pre class="language-css"><code>box-align: start;</code></pre>
+                <h2>Box-Direction</h2><pre class="language-css"><code>box-direction: normal;</code></pre>
+                <h2>Box-Flex</h2><pre class="language-css"><code>box-flex: normal;</code></pre>
+                <h2>Box-Flex-Group</h2><pre class="language-css"><code>box-flex-group: 2;</code></pre>
+                <h2>Box-Orient</h2><pre class="language-css"><code>box-orient: inline;</code></pre>
+                <h2>Box-Pack</h2><pre class="language-css"><code>box-pack: justify;</code></pre>
+                <h2>Box-Sizing</h2><pre class="language-css"><code>box-sizing: margin-box;</code></pre>
+                <h2>Max-Width</h2><pre class="language-css"><code>max-width: 800px;</code></pre>
+                <h2>Min-Width</h2><pre class="language-css"><code>min-width: 500px;</code></pre>
+                <h2>Max-Height</h2><pre class="language-css"><code>max-height: 100px;</code></pre>
+                <h2>Min-Height</h2><pre class="language-css"><code>min-height: 80px;</code></pre>
+
+                <h1>Table</h1>
+                Table properties are used to give style to the tables in the document. You can change many things like border spacing, table layout, caption, etc.
+
+                <h2>Border-Collapse</h2><pre class="language-css"><code>border-collapse: separate;</code></pre>
+                <h2>Empty-Cells</h2><pre class="language-css"><code>empty-cells: show;</code></pre>
+                <h2>Border-Spacing</h2><pre class="language-css"><code>border-spacing: 2px;</code></pre>
+                <h2>Table-Layout</h2><pre class="language-css"><code>table-layout: auto;</code></pre>
+                <h2>Caption-side</h2><pre class="language-css"><code>caption-side: bottom;</code></pre>
+            
+                <h1>Columns</h1>
+                These properties are used explicitly with columns of the tables, and they are used to give the table an incredible look.
+            
+                <h2>Column-Count</h2><pre class="language-css"><code>column-count: 10;</code></pre>
+                <h2>Column-gap</h2><pre class="language-css"><code>column-gap: 5px;</code></pre>
+                <h2>Column-Rule-Width</h2><pre class="language-css"><code>column-rule-width: medium;</code></pre>
+                <h2>Column-Rule-Style</h2><pre class="language-css"><code>column-rule-style: dotted ;</code></pre>
+                <h2>Column-Rule-Color</h2><pre class="language-css"><code>column-rule-color: black;</code></pre>
+                <h2>Column-Width</h2><pre class="language-css"><code>column-width: 10px;</code></pre>
+                <h2>Column-Span</h2><pre class="language-css"><code>column-span: all;</code></pre>
+            
+                <h1>List & Markers</h1>
+                List and marker properties are used to customize lists in the document.
+                
+                <h2>List-Style-Type</h2><pre class="language-css"><code>list-style-type: square;</code></pre>
+                <h2>List-Style-Position</h2><pre class="language-css"><code>list-style-position: 20px;</code></pre>
+                <h2>List-Style-Image</h2><pre class="language-css"><code>list-style-image: url(image.gif);</code></pre>
+                <h2>Marker-Offset</h2><pre class="language-css"><code>marker-offset: auto;</code></pre>
+            
+                <h1>Animations</h1>
+                CSS animations allow one to animate transitions or other media files on the web page.
+
+                <h2>Animation-Name</h2><pre class="language-css"><code>animation-name: myanimation;</code></pre>
+                <h2>Animation-Duration</h2><pre class="language-css"><code>animation-duration: 10s;</code></pre>
+                <h2>Animation-Timing-Function</h2><pre class="language-css"><code>animation-timing-function: ease;</code></pre>
+                <h2>Animation-Delay</h2><pre class="language-css"><code>animation-delay: 5ms;</code></pre>
+                <h2>Animation-Iteration-Count</h2><pre class="language-css"><code>animation-iteration-count: 3;</code></pre>
+                <h2>Animation-Direction</h2><pre class="language-css"><code>animation-direction: normal;</code></pre>
+                <h2>Animation-Play-State</h2><pre class="language-css"><code>animation-play-state: running;</code></pre>
+                <h2>Animation-Fill-Mode</h2><pre class="language-css"><code>animation-fill-mode: both;</code></pre>
+
+                <h1>Transitions</h1>
+                Transitions let you define the transition between two states of an element.
+
+                <h2>Transition-property</h2><pre class="language-css"><code>transition-property: none;</code></pre>
+                <h2>Transition-duration</h2><pre class="language-css"><code>transition-duration: 2s;</code></pre>
+                <h2>Transition-timing-function</h2><pre class="language-css"><code>transition-timing-function: ease-in-out;</code></pre>
+                <h2>Transition-delay</h2><pre class="language-css"><code>transition-delay: 20ms;</code></pre>
+
+                <h1>CSS Flexbox</h1>
+                Flexbox is a layout of CSS that lets you format HTML easily. Flexbox makes it simple to align items vertically and horizontally using rows and columns. Items will "flex" to different sizes to fill the space. And overall, it makes the responsive design more manageable.
+                <h1>Parent Properties (Flex Counter)</h1>
+                <h2>display</h2><pre class="language-css"><code>display: flex;</code></pre>
+                <h2>flex-direction</h2><pre class="language-css"><code>flex-direction: row | row-reverse | column | column-reverse;</code></pre>
+                <h2>flex-wrap</h2><pre class="language-css"><code>flex-wrap: nowrap | wrap | wrap-reverse;</code></pre>
+                <h2>flex-flow</h2><pre class="language-css"><code>flex-flow: column wrap;</code></pre>
+                <h2>justify-content</h2><pre class="language-css"><code>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;</code></pre>
+                <h2>align-items</h2><pre class="language-css"><code>align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;</code></pre>
+                <h2>align-content</h2><pre class="language-css"><code>align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;</code></pre>
+                
+                <h1>Child Properties (Flex Items)</h1>
+                <h2>order</h2><pre class="language-css"><code>order: 5; /* default is 0 */</code></pre>
+                <h2>flex-grow</h2><pre class="language-css"><code>flex-grow: 4; /* default 0 */</code></pre>
+                <h2>flex-shrink</h2><pre class="language-css"><code>flex-shrink: 3; /* default 1 */</code></pre>
+                <h2>flex-basis</h2><pre class="language-css"><code>flex-basis: | auto; /* default auto */</code></pre>
+                <h2>flex shorthand</h2><pre class="language-css"><code>flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]</code></pre>
+                <h2>align-self</h2><pre class="language-css"><code>align-self: auto | flex-start | flex-end | center | baseline | stretch;</code></pre>
+
+                <h1>CSS Grid</h1>
+                Grid layout is a 2-Dimensional grid system to CSS that creates complex responsive web design layouts more easily and consistently across browsers.
+                <h1>Parent Properties (Grid Container)</h1>
+                <h2>display</h2><pre class="language-css"><code>display: grid | inline-grid;</code></pre>
+                <h2>grid-template-columns</h2><pre class="language-css"><code>grid-template-columns: 12px 12px 12px;</code></pre>
+                <h2>grid-template-rows</h2><pre class="language-css"><code>grid-template-rows: 8px auto 12px;</code></pre>
+                <h2>grid-template</h2><pre class="language-css"><code>grid-template: none | <grid-template-rows> / <grid-template-columns>;</code></pre>
+                <h2>column-gap</h2><pre class="language-css"><code>column-gap: <line-size>;</code></pre>
+                <h2>row-gap</h2><pre class="language-css"><code>row-gap: <line-size>;</code></pre>
+                <h2>grid-column-gap</h2><pre class="language-css"><code>grid-column-gap: <line-size>;</code></pre>
+                <h2>grid-row-gap</h2><pre class="language-css"><code>grid-row-gap: <line-size>;</code></pre>
+                <h2>gap shorthand</h2><pre class="language-css"><code>gap: <grid-row-gap> <grid-column-gap>;</code></pre>
+                <h2>grid-gap shorthand</h2><pre class="language-css"><code>grid-gap: <grid-row-gap> <grid-column-gap>;</code></pre>
+                <h2>justify-items</h2><pre class="language-css"><code>justify-items: start | end | center | stretch;</code></pre>
+                <h2>align-items</h2><pre class="language-css"><code>align-items: start | end | center | stretch;</code></pre>
+                <h2>place-items</h2><pre class="language-css"><code>place-items: center;</code></pre>
+                <h2>justify-content</h2><pre class="language-css"><code>justify-content: start | end | center | stretch | space-around | space-between | space-evenly;</code></pre>
+                <h2>align-content</h2><pre class="language-css"><code>align-content: start | end | center | stretch | space-around | space-between | space-evenly;</code></pre>
+                <h2>place-content</h2><pre class="language-css"><code>place-content: <align-content> / <justify-content> ;</code></pre>
+                <h2>grid-auto-columns</h2><pre class="language-css"><code>grid-auto-columns: <track-size> ...;</code></pre>
+                <h2>grid-auto-rows</h2><pre class="language-css"><code>grid-auto-rows: <track-size> ...;</code></pre>
+                <h2>grid-auto-flow</h2><pre class="language-css"><code>grid-auto-flow: row | column | row dense | column dense;</code></pre>
+                
+                <h1>Chid Properties (Grid Items)</h1>
+                <h2>grid-column-start</h2><pre class="language-css"><code>grid-column-start: <number> | <name> | span <number> | span <name> | auto;</code></pre>
+                <h2>grid-column-end</h2><pre class="language-css"><code>grid-column-end: <number> | <name> | span <number> | span <name> | auto;</code></pre>
+                <h2>grid-row-start</h2><pre class="language-css"><code>grid-row-start: <number> | <name> | span <number> | span <name> | auto;</code></pre>
+                <h2>grid-row-end</h2><pre class="language-css"><code>grid-row-end: <number> | <name> | span <number> | span <name> | auto;</code></pre>
+                <h2>grid-column shorthand</h2><pre class="language-css"><code>grid-column: <start-line> / <end-line> | <start-line> / span <value>;</code></pre>
+                <h2>grid-row shorthand</h2><pre class="language-css"><code>grid-row: <start-line> / <end-line> | <start-line> / span <value>;</code></pre>
+                <h2>grid-area</h2><pre class="language-css"><code>grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>;</code></pre>
+                <h2>justify-self</h2><pre class="language-css"><code>justify-self: start | end | center | stretch;</code></pre>
+                <h2>align-self</h2><pre class="language-css"><code>align-self: start | end | center | stretch;</code></pre>
+                <h2>place-self</h2><pre class="language-css"><code>place-self: center;</code></pre>
+
+            </li>
+        </ol>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download">
+        <h3>Download CSS CheatSheet PDF</h3>
+        <a href="./Documents/CSS CheatSheet PDF.pdf">
+            <button class="btn-d">PDF Here !!!</button>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer1">
+            <img src="./images/CheatSheet.png" alt="">
+            <h1>CHEAT SHEET</h1>
+            <h4>Developed by Pratham Choudhary</h4>
+        </div>
+
+        <div class="footer2">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML_index.html">HTML</a></li>
+                <li><a href="CSS_index.html">CSS</a></li>
+                <li><a href="JavaScript_index.html">JavaScript</a></li>
+                <li><a href="c_index.html">C</a></li>
+                <li><a href="C++_index.html">C++</a></li>
+                <li><a href="python_index.html">Python</a></li>
+            </ul>
+        </div>
+
+        <div class="footer3">
+            <ul>
+                <li><a href="/">Portfolio</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/">Service</a></li>
+            </ul>
+        </div>
+        <div class="vl"></div>
+        <div class="footer4">
+            <h1>Follow Us</h1>
+            <a href="https://github.com/PrathamChoudharyy" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #ebcd07;"></i></a>
+            <a href="https://www.linkedin.com/in/pratham-choudhary-coder/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl" style="color: #eacc05;"></i></a>
+            <a href="https://www.instagram.com/pratham_gurjarr/" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="color: #eacc05;"></i></a>
+            <h1>Mail us</h1>
+            <a href="/" target="_blank"><i class="fa-solid fa-envelope fa-2xl" style="color: #eacc05;"></i>choudharyy.pratham@gmail.com</a>
+        </div>
+
+    </footer>
+    <!-- Copyright -->
+    <div class="copy">
+        <hr>
+        <h5>All rights reserved &copy; 2023 Pratham Choudhary</h5>
+    </div>
+</body>
+
+</html>
